@@ -1,0 +1,66 @@
+CREATE DATABASE bet_stats;
+
+USE bet_stats;
+
+CREATE TABLE games (
+    game_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    game_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    total_bets DECIMAL(10,2),
+    total_wins INT(11),
+    total_losses INT(11),
+    player_id INT(11),
+    outcome DECIMAL(10,2),
+    FOREIGN KEY player_id REFERENCES players(player_id) ON DELETE CASCADE
+);
+
+CREATE TABLE players (
+    player_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(100),
+    balance DECIMAL(10,2),
+    joined_at TIMESTAMP
+);
+
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (1,'2025-01-15 14:00:00',400.00,2,15,1,665.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (2,'2025-01-16 16:30:00',250.00,1,20,2,-2936.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (3,'2025-01-17 10:00:00',150.00,2,24,3,-1674.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (4,'2025-01-18 18:00:00',500.00,2,24,4,-2562.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (5,'2025-01-19 11:30:00',350.00,2,24,5,1212.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (6,'2025-01-20 13:45:00',600.00,1,25,6,-1254.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (7,'2025-01-21 12:00:00',450.00,1,25,7,-904.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (8,'2025-01-22 17:30:00',700.00,1,25,8,2241.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (9,'2025-01-23 19:00:00',800.00,2,24,9,-1087.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (10,'2025-01-24 14:45:00',250.00,1,25,10,2846.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (11,'2025-01-25 16:15:00',300.00,2,24,11,2490.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (12,'2025-01-26 10:30:00',200.00,2,24,12,912.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (13,'2025-01-27 15:00:00',550.00,2,24,13,90.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (14,'2025-01-28 11:00:00',700.00,2,24,14,714.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (15,'2025-01-29 20:30:00',450.00,1,25,15,298.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (16,'2025-02-04 19:58:26',200.00,1,5,2,2351.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (17,'2025-02-04 20:35:10',300.00,1,15,2,1857.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (18,'2025-02-04 20:42:39',161.00,0,7,3,-767.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (19,'2025-02-04 20:42:58',92.00,0,4,2,-406.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (20,'2025-02-04 20:43:14',161.00,0,7,2,-2729.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (21,'2025-02-04 20:45:34',4500.00,3,12,3,2575.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (22,'2025-02-04 20:48:16',1296.00,0,4,3,58.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (23,'2025-02-04 21:03:40',1704.00,0,8,3,0.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (24,'2025-02-04 21:04:37',496.00,0,4,3,0.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (25,'2025-02-04 21:05:31',83564.00,2,24,4,51424.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (26,'2025-02-04 21:06:48',1300.00,1,25,13,51174.00);
+INSERT INTO `games` (`game_id`,`game_date`,`total_bets`,`total_wins`,`total_losses`,`player_id`,`outcome`) VALUES (27,'2025-02-04 21:08:07',2000.00,0,2,3,-2000.00);
+
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (1,'Alice Johnson','alice@example.com',67.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (2,'Bob Smith','bob@example.com',-368.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (3,'Charlie Brown','charlie@example.com',13649.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (4,'David White','david@example.com',51348.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (5,'Eve Green','eve@example.com',0.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (6,'Frank Harris','frank@example.com',90.50,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (7,'Grace Lee','grace@example.com',180.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (8,'Hannah Turner','hannah@example.com',65.75,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (9,'Ian Carter','ian@example.com',30.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (10,'Jack Wilson','jack@example.com',250.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (11,'Kimberly Scott','kimberly@example.com',150.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (12,'Liam Perez','liam@example.com',80.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (13,'Mia Walker','mia@example.com',-49.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (14,'Noah Clark','noah@example.com',110.00,'2025-01-16 21:44:16');
+INSERT INTO `players` (`player_id`,`name`,`email`,`balance`,`joined_at`) VALUES (15,'Olivia Davis','olivia@example.com',220.00,'2025-01-16 21:44:16');
