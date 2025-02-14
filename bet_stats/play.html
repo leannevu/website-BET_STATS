@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html en>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Playing BetStats</title>
+        <link rel="stylesheet" href="play.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <a href="./index.html">Homepage</a>
+            <a href="./game_insights.html">Game Insights</a>
+        </nav>
+        <h1 id="title">Pick player here</h1>
+        <div class="pick-player">
+            <div class="player-list">
+                <ul id="player-scroll-list">
+                    <li>Yo</li>
+                    <li>Yeaaa</li>
+                </ul>
+            </div>
+            <div class="player-list">
+                <p>Current Balance: </p>
+            </div>
+        </div>
+        <div class="game-console">
+            <section class="introduction">
+                <h2 id="welcome-intro">Welcome player!</h2>
+            </section>
+        <section class="card-images">
+            <div class="cards">
+                <img id="card1" src="./cards/Joker.jpg" />
+                <img id="card2" src="./cards/Joker2.png" />
+            </div>
+        </section>
+        <section class="input">
+            <button id="draw-button" onclick="draw()">Draw</button>
+            <button id="clear-button" onclick="clear_game()">Clear</button>
+            <label for="bet-amount">Bet Amount: </label>
+            <input type="text" label="bet-amount" id="bet-amount">
+        </section>
+        </div>
+        <script src="play.js"></script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+    text-align: center;
+}
+
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8B0000; /* Darker blue when hovered */
+}
+
+.section-about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.section-about p {
+    font-size: 200%;
+}
+
