@@ -1,4 +1,4 @@
-As I transition from Computer Science to Data Science, I decided to take a more analytical approach with my full stack projects involving database management. I used Python (Flask, Matplotlib, Pandas) in Bet Stats to populate charts and graphs in real time, as players play (saving outcome results, number of times played, date played, etc. into the database)
+As I transition from Computer Science to Data Science, I decided to take a more analytical approach with my full stack projects involving database management. I used Python (Flask, Matplotlib, Pandas) in Bet Stats to populate charts and graphs in real time, as players play (saving outcome results, number of times played, date played, etc. into the database). 
 
 # website-BET_STATS
 Interactive Drawing Card Game with Analytics
@@ -20,5 +20,10 @@ As a user, I want to see game or player insights
      As a user, I can see the Outcome Distribution
      As a user, I see the Total Bets Per Player as a pie chart
 
-     
-
+Epic
+As a user, I want a user centered design
+    Story
+    As a user, I want to see "Welcome, -my name-" for personalization
+    As a user, I don't want to lose my progress and accidentlly click on someone else's name
+    As a user, I want to see my balance after every draw
+    As a user, I want access to other pages on every page
